@@ -1,0 +1,41 @@
+<prodesp-modal [showConfirmButton]='showConfirmButton' [closeButtonText]='closeButtonText' [confirmButtonText]='confirmButtonText'
+    [title]='title' (onClose)='closeModal()' (onConfirm)='salvar($event)'>
+    <div class="row">
+        <div id="registration-form" class="form-horizontal" style="margin:5px;">
+            <form role="form">
+                <div class="col-xs-12">
+                    <p [innerHtml]='text'></p>
+                </div>
+                <div *ngIf="usuarioCAF" class="col-xs-12">
+                    <div class="form-title">
+                        Usar como justificativa da
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <div class="form-group">
+
+                                <div class="col-xs-3">
+                                    <label for="exampleInputEmail2">CAF:</label>
+                                    <input type="checkbox" [ngModelOptions]="{ standalone: true }" [(ngModel)]='UsarJustificativaCAF'>
+                                </div>
+                                <div class="col-xs-3" style="margin-top:3px">
+                                    <label for="exampleInputEmail2">CAF Pública: </label>
+                                    <input type="checkbox" [ngModelOptions]="{ standalone: true }" [(ngModel)]='UsarJustificativaCAFPublica'>
+                                </div>
+                                <div class="col-xs-9" style="margin-top:3px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">                  
+                    <div class="col-xs-12" *ngIf="ErrorCAF" class="alert alert-danger">
+                        <div>
+                            Selecione  um tipo de Justificativa
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</prodesp-modal>

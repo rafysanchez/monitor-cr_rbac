@@ -1,0 +1,9 @@
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {
+    padding: 18px 30px 20px 30px;
+}
